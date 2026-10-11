@@ -19,8 +19,7 @@ const legal = [
 
 const focus =
   "focus-visible:outline-[3px] focus-visible:outline-offset-4 focus-visible:outline-[#5cc4cb]";
-const colHeading =
-  "mb-4 text-[0.72rem] font-semibold uppercase leading-none tracking-[0.14em] text-[#8fa0ae]";
+const colHeading = "mb-4 text-[0.72rem] font-semibold uppercase leading-none tracking-[0.14em] text-[#8fa0ae]";
 const footLink = `text-[#eef2f4]/85 no-underline transition-colors hover:text-white hover:underline hover:underline-offset-4 ${focus}`;
 
 export default function SiteFooter() {
@@ -34,32 +33,33 @@ export default function SiteFooter() {
         <div className="flex flex-col items-start justify-between gap-6 border-b border-white/15 py-12 sm:flex-row sm:items-center">
           <Link
             href="/"
-            className={`inline-flex items-center gap-3.5 rounded-sm text-[#eef2f4] no-underline ${focus}`}
+            aria-label="Adesoji Fagade Solicitor home"
+            className={`grid grid-cols-[34px_auto] items-center gap-x-2.5 leading-none text-[#eef2f4] no-underline ${focus}`}
           >
-            <span
-              aria-hidden="true"
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-[#eef2f4] font-display text-[1.05rem] text-[#0e1b2a]"
-            >
+            <span className="row-span-2 grid h-[34px] w-[34px] place-items-center border border-brass font-display text-[14px] text-brass">
               AF
             </span>
-            <span className="font-display text-[1.6rem] leading-none">
-              Adesoji Fagade Solicitor
-            </span>
+            <b className="font-display text-[19px] font-normal tracking-[-0.02em]">
+              Adesoji Fagade
+            </b>
+            <small className="mt-1 text-[10px] uppercase tracking-[0.18em] text-[#8fa0ae]">
+              Solicitor
+            </small>
           </Link>
-          <a
-            href="mailto:info@adesojifagadesolicitors.com"
-            className={`inline-flex items-center gap-2 rounded-full  bg-[#eef2f4] px-6 py-3 font-semibold text-[#0e1b2a]! no-underline transition-opacity hover:opacity-90 ${focus}`}
+          <Link
+            href="/contact"
+            className={`inline-flex items-center gap-2 rounded-full bg-[#eef2f4] px-6 py-3 font-semibold text-[#0e1b2a] no-underline transition-opacity hover:opacity-90 ${focus}`}
           >
             Discuss your matter <ArrowUpRight size={17} />
-          </a>
+          </Link>
         </div>
 
         {/* Main grid */}
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-12 md:grid-cols-12">
           <div className="col-span-2 md:col-span-6 lg:col-span-4">
             <p className="mb-3 max-w-[30rem] text-[#a9b7c3]">
-              Adesoji Fagade is a solicitor of England and Wales regulated by
-              the Solicitors Regulation Authority. SRA No. 8016700.
+              Adesoji Fagade is a solicitor of England and Wales regulated by the
+              Solicitors Regulation Authority. SRA No. 8016700.
             </p>
             <p className="mb-0 max-w-[30rem] text-[#a9b7c3]">
               Independent freelance practice providing non-reserved legal
@@ -68,10 +68,7 @@ export default function SiteFooter() {
             </p>
           </div>
 
-          <nav
-            aria-label="Pages"
-            className="md:col-span-2 lg:col-span-2 lg:col-start-6"
-          >
+          <nav aria-label="Pages" className="md:col-span-2 lg:col-span-2 lg:col-start-6">
             <p className={colHeading}>Pages</p>
             <ul className="m-0 flex list-none flex-col gap-2.5 p-0">
               {pages.map(({ label, href }) => (
@@ -104,10 +101,7 @@ export default function SiteFooter() {
               <br />
               London EC4A 2AB
             </p>
-            <a
-              href={`mailto:${EMAIL}`}
-              className={`text-[#eef2f4] underline underline-offset-4 [overflow-wrap:anywhere] ${focus}`}
-            >
+            <a href={`mailto:${EMAIL}`} className={`text-[#eef2f4] underline underline-offset-4 [overflow-wrap:anywhere] ${focus}`}>
               {EMAIL}
             </a>
           </address>
