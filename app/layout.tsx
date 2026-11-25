@@ -9,6 +9,10 @@ const SITE_URL = "https://www.adesojifagadesolicitors.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Google Search Console ownership check (URL-prefix property for the www site).
+  verification: {
+    google: "T6z9TAjetHaklEQ8pf9peK4QfYbEs6IRrfGYmvGJWOA",
+  },
   title: "Adesoji Fagade Solicitor | Commercial Legal Advice",
   description:
     "Independent commercial legal advice for business owners, founders and organisations.",
