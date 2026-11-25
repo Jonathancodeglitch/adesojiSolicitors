@@ -4,7 +4,11 @@ import "./globals.css";
 import SiteFooter from "@/components/footer";
 import Header from "@/components/header";
 
+// Preferred canonical domain. Relative canonical/OG URLs on each page resolve against this.
+const SITE_URL = "https://www.adesojifagadesolicitors.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Adesoji Fagade Solicitor | Commercial Legal Advice",
   description:
     "Independent commercial legal advice for business owners, founders and organisations.",
@@ -16,7 +20,7 @@ export const metadata: Metadata = {
         media: "(prefers-color-scheme: light)",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/icon.png",
   },
 };
 

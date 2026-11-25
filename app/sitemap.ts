@@ -12,6 +12,7 @@ const routes: { path: string; priority: number }[] = [
   { path: "/", priority: 1 },
   { path: "/about", priority: 0.8 },
   { path: "/services", priority: 0.8 },
+  { path: "/contract-transformation", priority: 0.8 },
   { path: "/contact", priority: 0.8 },
   { path: "/client-information", priority: 0.5 },
   { path: "/complaints-procedure", priority: 0.5 },
@@ -22,8 +23,9 @@ const routes: { path: string; priority: number }[] = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   return routes.map(({ path, priority }) => ({
-    // Trailing slash matches `trailingSlash: true` in next.config.
-    url: path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}/`,
+    // No trailing slash on inner pages: next.config does not set `trailingSlash`,
+    // so /about (not /about/) is the URL the site actually serves.
+    url: path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`,
     lastModified,
     priority,
   }));

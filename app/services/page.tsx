@@ -115,6 +115,31 @@ export default function ServicesPage() {
             </li>
           ))}
         </ol>
+
+        {/* Featured: Legal & Contract Transformation (dedicated page) */}
+        <div className="mt-5 grid gap-6 border border-ink bg-ink p-7 text-ivory md:grid-cols-[1.2fr_0.8fr] md:items-center md:gap-[6vw] md:p-10">
+          <div>
+            <p className="mb-4 flex items-center gap-2.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#a9b7c3]">
+              <span aria-hidden="true" className="block h-px w-6 bg-brass" />
+              Featured service
+            </p>
+            <h2 className="mb-4 font-display text-[clamp(26px,2.6vw,36px)] font-normal leading-[1.15] tracking-[-0.01em]">
+              Legal &amp; Contract Transformation
+            </h2>
+            <p className="m-0 text-[15px] leading-[1.65] text-[#c9d2d8]">
+              Reviewing and improving the end-to-end contracting lifecycle,
+              from intake, templates and negotiation to approvals, execution,
+              storage and ongoing contract management.
+            </p>
+          </div>
+          <Link
+            href="/contract-transformation"
+            className="inline-flex w-fit items-center justify-center gap-[15px] bg-ivory px-5 py-[15px] text-[10px] font-semibold uppercase tracking-[0.12em] text-ink transition-colors hover:bg-cream md:justify-self-end"
+          >
+            Explore Legal &amp; Contract Transformation{" "}
+            <ArrowUpRight size={17} aria-hidden="true" />
+          </Link>
+        </div>
       </section>
 
       {/* Fees and scope */}
