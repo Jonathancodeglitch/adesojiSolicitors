@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-// Required for `output: "export"` (static export).
+
 export const dynamic = "force-static";
 
 // Set NEXT_PUBLIC_SITE_URL in your hosting settings, or edit the fallback below.
