@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -13,6 +15,10 @@ const navItems = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+  const pathname = usePathname();
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
   return (
     <header className="site-header">
       <Link
